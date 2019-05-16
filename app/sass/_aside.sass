@@ -1,0 +1,48 @@
+/*======================= ASIDE ====================*/
+.aside
+	padding-top: 53px
+	padding-left: 30px
+	padding-right: 30px
+	width: 150px
+	background: $bg_aside
+	+r(992)
+		display: none
+	&__title
+		position: relative
+		margin-bottom: 72px
+		text-align: center
+		&::after
+			+pseudo
+			width: 25px
+			height: 4px
+			bottom: -14px
+			left: 50%
+			transform: translateX(-50%)
+			background: $main
+	&__menu
+		margin-bottom: 50px
+		padding: 17px 0
+		text-align: center
+		border-top: 2px solid rgba(#ffffff, 0.1)
+		border-bottom: 2px solid rgba(#ffffff, 0.1)
+		li
+			margin: 20px 0
+		&-item
+			text-transform: uppercase
+			color: #ffffff
+			font-size: 16px
+			opacity: 0.5
+			transition: opacity .3s 
+			&:hover
+				color: #ffffff
+				opacity: 1
+	&__search
+		width: 28px
+		+push-auto
+		#search
+			transition: opacity .3s 
+		&:hover #search
+			opacity: 1
+		
+
+		

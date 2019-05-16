@@ -1,0 +1,123 @@
+/*======================= Стартовые настройки ====================*/
+
+*
+	box-sizing: border-box
+	&:before, &:after
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: rgba( $maintext, .6)
+
+*:-moz-placeholder
+	color: rgba( $maintext, .6)
+
+*::-moz-placeholder
+	color: rgba( $maintext, .6)
+
+*:-ms-input-placeholder
+	color: rgba( $maintext, .6)
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #fff
+body input:required:valid,
+body textarea:required:valid
+	color: #fff
+
+html, body
+	margin: 0
+	padding: 0
+	height: 100%
+
+body
+	margin: 0
+	padding: 0
+	font-size: $p
+	min-width: 320px
+	position: relative
+	color: $maintext
+	font-family: $default-font
+	font-weight: normal
+	letter-spacing: 0.45px
+	overflow-x: hidden
+	background:#E5E5E5
+
+.clearfix::after 
+  content: ""
+  display: table
+  clear: both
+
+::selection
+	color: #ffffff
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+	font-family: $default-font
+	color: $bg_main
+	text-transform: uppercase
+	font-weight: 600
+
+h1, .h1
+	font-size: $h1
+	font-weight: 400
+	letter-spacing: 3.1px
+	color: #ffffff
+	+r(768)
+		font-size: 40px
+		letter-spacing: 2px
+	+r(480)
+		font-size: 25px
+		letter-spacing: 1px
+h2, .h2
+	font-size: $h2
+	letter-spacing: 2.2px
+	+r(480)
+		font-size: 28px
+
+h3, .h3
+	font-size: $h3
+	color: $main
+	font-family: $double-font
+	font-weight: 100
+	letter-spacing: 0.64px
+	
+h4, .h4
+	font-size: $h4
+	letter-spacing: 1.5px
+	+r(992)
+		font-size: 24px
+a
+	&:hover
+		text-decoration: none
+
+button, input, select, a, textarea
+	border: none
+	outline: none
+	cursor: pointer
+	&:active, &:focus
+		border: none
+		outline: none
+
+.button
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 160px
+	height: 55px
+	color: #ffffff
+	border: 2px solid $main
+	border-radius: 28px
+	background: $main	
+	text-transform: uppercase
+	letter-spacing: 0.9px
+	transition: color .3s, background .3s
+	&:hover
+		color: $main
+		background: transparent
+	&:active, &:focus
+		border: 2px solid $main
+/*==============================ADD CLASS==============================*/
+
+.img-responsive
+	display: block
+	width: 100%
+	height: auto

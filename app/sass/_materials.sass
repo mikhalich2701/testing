@@ -1,0 +1,58 @@
+/*======================MATERIALS=======================*/
+.materials
+	padding: 120px 
+	background: #ffffff
+	+r(1700)
+		padding-left: 30px
+		padding-right: 30px
+		&__block
+			margin: 0 0
+	+r(992)
+		padding-left: 0
+		padding-right: 0
+		&__block
+			padding-top: 80px
+			padding-bottom: 60px
+			&-text
+				font-size: 16px
+				line-height: 20px
+	+r(768)
+		padding-bottom: 0
+		.col-sm-12
+			margin-bottom: 60px
+		&__block
+			max-width: 400px
+			+push-auto
+	&__block
+		position: relative
+		margin: 0 15px
+		padding-top: 106px
+		padding-bottom: 61px
+		text-align: center
+		background: $bg_duoble
+		&-title
+			margin-bottom: 32px
+		&-text
+			max-width: 240px
+			+push-auto
+			margin-bottom: 35px
+			color: $duobletext
+			font-weight: 300
+			line-height: 30px
+			letter-spacing: 0.45px
+		.button
+			+push-auto
+		&-icon
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 110px
+			height: 110px
+			top: -55px
+			left: 50%
+			transform: translateX(-50%)
+			border-radius: 50%
+			background: #ffffff
+
+

@@ -1,0 +1,74 @@
+// width
+=r($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+
+// Центрирование блока по горизонтали и по вертикали
+=vcenter-text
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+// Псевдо, при использовании ::before и ::after
+// пример: @include pseudo(inline-block,relative,'next');
+=pseudo($display: block, $pos: absolute, $content: "")
+  display: $display
+  position: $pos
+  content: $content
+
+// Центрирование элемента
+// пример: @include push--auto;
+=push-auto
+	margin:
+		left: auto
+		right: auto
+
+// Фигуры 
+
+// Треугольник
+// пример: +triangle(500,50, #fff, left)
+=triangle($width, $height, $bg, $direction)
+	width: 0px
+	height: 0px
+	border-style: solid
+	@if $direction == top
+		border-width: 0 $width / 2 + px $height + px $width / 2 + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == right
+		border-width: $height / 2 + px 0 $height / 2 + px $width + px
+		border-color: transparent transparent transparent $bg
+	@if $direction == bottom
+		border-width: $height + px $width / 2 + px 0 $width / 2 + px
+		border-color: $bg transparent transparent transparent
+	@if $direction == left
+		border-width: $height / 2 + px $width + px $height / 2 + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == topleft
+		border-width: $height + px $width + px 0 0
+		border-color: $bg transparent transparent transparent
+	@if $direction == topright
+		border-width: 0 $width + px $height + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == bottomright
+		border-width: 0 0 $height + px $width + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == bottomleft
+		border-width: $height + px 0 0 $width + px
+		border-color: transparent transparent transparent $bg
+
+// Стрелка
+=arrow($width, $height, $color, $direction, $px)
+	width: $width + px
+	height: $height + px
+	border-left: $px + px solid $color
+	border-bottom: $px + px solid $color
+	@if $direction == top
+		transform: rotate(135deg)
+	@if $direction == right
+		transform: rotate(-135deg)
+	@if $direction == bottom
+		transform: rotate(-45deg)
+	@if $direction == left
+		transform: rotate(45deg)
+	

@@ -1,0 +1,51 @@
+/*======================= TITLEPAGE ====================*/
+.titlepage
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0 30px
+	min-height: 100vh
+	+r(768)
+		&__title
+			margin-top: 20px
+			margin-bottom: 30px
+			&::after
+				top: -20px
+		&__subtitle
+			margin-bottom: 20px
+			font-size: 25px
+		&__text
+			margin-bottom: 30px
+			font-size: 18px
+			line-height: 24px
+	+r(768)
+		&__subtitle
+			font-size: 20px
+	&__content
+		max-width: 800px
+	&__title
+		position: relative
+		margin-top: 30px
+		margin-bottom: 58px
+		&::after
+			+pseudo
+			width: 60px
+			height: 4px
+			top: -30px
+			left: 0
+			background: $main
+	&__subtitle
+		margin-bottom: 32px
+		color: #ffffff
+		font-weight: 500
+	&__text
+		margin-bottom: 54px
+		opacity: 0.5
+		font-size: 22px
+		font-weight: 300
+		line-height: 36px
+		letter-spacing: 0.33px
+	&__button
+		width: 200px
+		height: 60px
+		border-radius: 30px
