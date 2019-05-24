@@ -153,6 +153,8 @@ textarea:focus {
   outline: none;
 }
 
+/*==============================BEM==============================*/
+
 .button {
   display: -webkit-box;
   display: -webkit-flex;
@@ -166,7 +168,8 @@ textarea:focus {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 160px;
+  padding-left: 35px;
+  padding-right: 35px;
   height: 55px;
   color: #ffffff;
   border: 2px solid #4cb480;
@@ -304,17 +307,17 @@ textarea:focus {
   min-height: 100vh;
 }
 
-.titlepage__content {
+.titlepageContent {
   max-width: 800px;
 }
 
-.titlepage__title {
+.titlepageContent__title {
   position: relative;
   margin-top: 30px;
   margin-bottom: 58px;
 }
 
-.titlepage__title::after {
+.titlepageContent__title::after {
   display: block;
   position: absolute;
   content: "";
@@ -325,13 +328,13 @@ textarea:focus {
   background: #4cb480;
 }
 
-.titlepage__subtitle {
+.titlepageContent__subtitle {
   margin-bottom: 32px;
   color: #ffffff;
   font-weight: 500;
 }
 
-.titlepage__text {
+.titlepageContent__text {
   margin-bottom: 54px;
   opacity: 0.5;
   font-size: 22px;
@@ -340,8 +343,9 @@ textarea:focus {
   letter-spacing: 0.33px;
 }
 
-.titlepage__button {
-  width: 200px;
+.titlepageContent__button {
+  padding-left: 60px;
+  padding-right: 60px;
   height: 60px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
@@ -354,7 +358,7 @@ textarea:focus {
   background: #ffffff;
 }
 
-.materials__block {
+.blockFile {
   position: relative;
   margin: 0 15px;
   padding-top: 106px;
@@ -363,11 +367,11 @@ textarea:focus {
   background: #f6f6f6;
 }
 
-.materials__block-title {
+.blockFile__title {
   margin-bottom: 32px;
 }
 
-.materials__block-text {
+.blockFile__text {
   max-width: 240px;
   margin-left: auto;
   margin-right: auto;
@@ -378,12 +382,12 @@ textarea:focus {
   letter-spacing: 0.45px;
 }
 
-.materials__block .button {
+.blockFile__button {
   margin-left: auto;
   margin-right: auto;
 }
 
-.materials__block-icon {
+.blockFile__icon {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -494,7 +498,7 @@ textarea:focus {
   background: #4cb480;
 }
 
-.blog__item {
+.blogItem {
   margin-bottom: 60px;
   width: 100%;
   display: -webkit-box;
@@ -514,7 +518,7 @@ textarea:focus {
   align-items: flex-start;
 }
 
-.blog__img {
+.blogItem__img {
   width: -webkit-calc(50% - 40px);
   width: calc(50% - 40px);
   height: 330px;
@@ -523,27 +527,23 @@ textarea:focus {
   background-color: #e2e2e2;
 }
 
-.blog__info {
+.blogItem__info {
   padding-top: 37px;
   width: -webkit-calc(50% - 40px);
   width: calc(50% - 40px);
 }
 
-.blog__info-title {
+.blogItem__title {
   margin-bottom: 31px;
 }
 
-.blog__info-text {
+.blogItem__text {
   margin-bottom: 35px;
   color: #5a5f65;
   font-size: 18px;
   font-weight: 300;
   line-height: 30px;
   letter-spacing: 0.45px;
-}
-
-.blog__info-button {
-  width: 176px;
 }
 
 /*======================= FOOTER ====================*/
@@ -702,7 +702,7 @@ textarea:focus {
     padding-right: 30px;
   }
 
-  .materials__block {
+  .blockFile {
     margin: 0 0;
   }
 
@@ -710,11 +710,11 @@ textarea:focus {
     padding: 124px 30px 60px 30px;
   }
 
-  .blog__info {
+  .blogItem__info {
     padding-top: 10px;
   }
 
-  .blog__info-text {
+  .blogItem__text {
     line-height: 25px;
   }
 
@@ -752,22 +752,22 @@ textarea:focus {
     padding-right: 0;
   }
 
-  .materials__block {
+  .blockFile {
     padding-top: 80px;
     padding-bottom: 60px;
   }
 
-  .materials__block-text {
+  .blockFile__text {
     font-size: 16px;
     line-height: 20px;
   }
 
-  .blog__img {
+  .blogItem__img {
     width: -webkit-calc(50% - 10px);
     width: calc(50% - 10px);
   }
 
-  .blog__info {
+  .blogItem__info {
     width: -webkit-calc(50% - 10px);
     width: calc(50% - 10px);
   }
@@ -780,28 +780,24 @@ textarea:focus {
     letter-spacing: 2px;
   }
 
-  .titlepage__title {
+  .titlepageContent {
     margin-top: 20px;
     margin-bottom: 30px;
   }
 
-  .titlepage__title::after {
+  .titlepageContent::after {
     top: -20px;
   }
 
-  .titlepage__subtitle {
+  .titlepageContent__subtitle {
     margin-bottom: 20px;
     font-size: 25px;
   }
 
-  .titlepage__text {
+  .titlepageContent__text {
     margin-bottom: 30px;
     font-size: 18px;
     line-height: 24px;
-  }
-
-  .titlepage__subtitle {
-    font-size: 20px;
   }
 
   .materials {
@@ -812,7 +808,7 @@ textarea:focus {
     margin-bottom: 60px;
   }
 
-  .materials__block {
+  .blockFile {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -832,12 +828,12 @@ textarea:focus {
     line-height: 30px;
   }
 
-  .blog__img,
-  .blog__info {
+  .blogItem__img,
+  .blogItem__info {
     width: 100%;
   }
 
-  .blog__info-title {
+  .blogItem__title {
     margin-top: 30px;
   }
 
@@ -862,6 +858,10 @@ textarea:focus {
   h2,
   .h2 {
     font-size: 28px;
+  }
+
+  .titlepageContent__subtitle {
+    font-size: 20px;
   }
 
   .comment__text {

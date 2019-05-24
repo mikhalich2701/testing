@@ -5,12 +5,13 @@
 	align-items: center
 	padding: 0 30px
 	min-height: 100vh
+.titlepageContent
+	max-width: 800px
 	+r(768)
-		&__title
-			margin-top: 20px
-			margin-bottom: 30px
-			&::after
-				top: -20px
+		margin-top: 20px
+		margin-bottom: 30px
+		&::after
+			top: -20px
 		&__subtitle
 			margin-bottom: 20px
 			font-size: 25px
@@ -18,11 +19,9 @@
 			margin-bottom: 30px
 			font-size: 18px
 			line-height: 24px
-	+r(768)
+	+r(480)
 		&__subtitle
 			font-size: 20px
-	&__content
-		max-width: 800px
 	&__title
 		position: relative
 		margin-top: 30px
@@ -46,6 +45,7 @@
 		line-height: 36px
 		letter-spacing: 0.33px
 	&__button
-		width: 200px
+		padding-left: 60px
+		padding-right: 60px
 		height: 60px
 		border-radius: 30px

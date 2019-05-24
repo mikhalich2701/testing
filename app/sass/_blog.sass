@@ -4,21 +4,6 @@
 	padding: 154px 120px 60px 120px
 	+r(1700)
 		padding: 124px 30px 60px 30px
-		&__info
-			padding-top: 10px
-			&-text
-				line-height: 25px
-	+r(992)
-		&__img
-			width: calc(50% - 10px)
-		&__info
-			width: calc(50% - 10px)
-	+r(768)
-		&__img, &__info
-			width: 100%
-		&__info
-			&-title
-				margin-top: 30px
 	&__title
 		position: relative
 		margin-bottom: 80px
@@ -29,14 +14,29 @@
 			top: -30px
 			left: 0
 			background: $main
-	&__item
-		margin-bottom: 60px
-		width: 100%
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
-		align-items: flex-start
-
+.blogItem
+	+r(1700)
+		&__info
+			padding-top: 10px
+		&__text
+			line-height: 25px
+	+r(992)
+		&__img
+			width: calc(50% - 10px)
+		&__info
+			width: calc(50% - 10px)
+	+r(768)
+		&__img, &__info
+			width: 100%
+		&__info
+		&__title
+			margin-top: 30px
+	margin-bottom: 60px
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: flex-start
 	&__img
 		width: calc(50% - 40px)
 		height: 330px
@@ -45,14 +45,12 @@
 	&__info
 		padding-top: 37px
 		width: calc(50% - 40px)
-		&-title
-			margin-bottom: 31px
-		&-text
-			margin-bottom: 35px
-			color: $duobletext 
-			font-size: 18px
-			font-weight: 300
-			line-height: 30px
-			letter-spacing: 0.45px
-		&-button
-			width: 176px
+	&__title
+		margin-bottom: 31px
+	&__text
+		margin-bottom: 35px
+		color: $duobletext 
+		font-size: 18px
+		font-weight: 300
+		line-height: 30px
+		letter-spacing: 0.45px
